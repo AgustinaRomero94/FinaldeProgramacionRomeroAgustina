@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Portal</title>
+    <title></title>
     <link
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
         rel="stylesheet"
@@ -10,7 +10,7 @@
         crossorigin="anonymous">
     <style>
         body {
-  background-color: rgb(255, 128, 192);
+  background-color: rgb(0, 128, 255);
 }
 
 h1 {
@@ -38,26 +38,26 @@ img {
 }
 
 .card {
-  width: 20rem;
+  width: 10rem;
   margin: 0 auto;
-  background-color: rgb(255, 255, 149);
+  background-color: rgb(255, 255, 255);
   border-radius: 1rem;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.5rem 1rem rgb(255, 255, 255);
 }
 
 .card-img-top {
   width: 100%;
-  height: 100px;
+  height: 50px;
   object-fit: cover;
 }
 
 .card-title {
-  font-size: 1.5rem;
+  font-size: 0.5rem;
   font-weight: bold;
 }
 
 .card-text {
-  font-size: 1rem;
+  font-size: 0,5rem;
 }
     </style>
     <script
@@ -73,8 +73,20 @@ img {
         <li style="display: flex;">
         <img src="https://static.hosteltur.com/app/public/uploads/img/articles/2013/09/01/L_5b14ea6f7958d_shutterstock_HOTEL.jpg"/>
     </li>
-    <h2>¡Reserva tu Habitación!</h2>
-    </div>
+    <br>
  
+    <h2>¡RESERVA TU HABITACION!</h2>
+
+    <ul>
+        <button type="button" class="btn btn-light" style="font-size:30px ;text-align: center;">
+                    <a href="disponibles">Habitaciones Disponibles</a></button>
+        <button type="button" class="btn btn-light" style="font-size:30px ;text-align: center;">
+                    <a href="dobles">Habitaciones Dobles</a></button>
+        <button type="button" class="btn btn-light" style="font-size:30px ;text-align: center;">
+                    <a href="premium">Habitaciones Premium</a></button>        
+        <button type="button" class="btn btn-light" style="font-size:30px ;text-align: center;">
+                    <a href="listado">Listado de Habitaciones</a></button>     
+    </ul>
+	</div>
     </body>
 </html>

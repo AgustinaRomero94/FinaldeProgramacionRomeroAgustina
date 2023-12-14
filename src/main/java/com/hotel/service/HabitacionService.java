@@ -1,35 +1,37 @@
 package com.hotel.service;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.hotel.model.HabitacionModel;
 import com.hotel.repository.HabitacionRepository;
 
+import java.util.List;
+
 @Service
 public class HabitacionService {
+	   
+		@Autowired
+	    
+		private HabitacionRepository habitacionRepository;
 
+	    public List<HabitacionModel> listarTodasLasHabitaciones() {
+	        return (List<HabitacionModel>) habitacionRepository.findAll();
+	    }
 
-	@Autowired
-	HabitacionRepository habitacionRepository;
-	
-	public void guardarHabitacion (HabitacionModel habitacion) {
-		habitacion.setEstado(true);
-		habitacionRepository.save(habitacion);
-	
- }
- 
- public List<HabitacionModel> buscarTodasHabitaciones(){
-	 //List<Habitacion> listado = new ArrayList<>();
-	 //return listado;
-	 
-	 return (List<HabitacionModel>) habitacionRepository.findByEstado(true);
-	 
- }
- public void modificarUnaHabitacion (HabitacionModel habitacion) {
-	 
- }
+	    public List<HabitacionModel> habitacionesDisponibles() {
+	        return habitacionRepository.findByEstado("libre");
+	    
+	    }
+	    public List<HabitacionModel> habitacionesDobles() {
+	        return habitacionRepository.findByEstado("libre");
+	        
+	        	
+	        }
+	    public List<HabitacionModel> habitacionesPremium() {
+		        return habitacionRepository.findByEstado("libre");
+	}
+	    public List<HabitacionModel> habitacionesListado() {
+	        return habitacionRepository.findByEstado("libre");
 }
-
+}

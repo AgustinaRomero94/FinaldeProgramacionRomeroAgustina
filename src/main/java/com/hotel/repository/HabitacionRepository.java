@@ -10,8 +10,8 @@ import com.hotel.model.HabitacionModel;
 @Repository
 
 public interface HabitacionRepository extends CrudRepository<HabitacionModel, Integer> {
-
-		public List<HabitacionModel> findByEstado (Boolean estado);
+	
+		public List<HabitacionModel> findByEstado (String estado);
 		
 		 
 }
